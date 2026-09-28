@@ -198,7 +198,7 @@ public class CalculatorTests
 
     [TestCase(0, 100, 10)]
     [TestCase(10, 0, 10)]
-    [TestCase(10, 100, -5)]
+    [TestCase(10, 100, -4)]
     public void ExpectedCumulativeFailures_InvalidInputs_ThrowsArgumentOutOfRangeException(double lambda0, double v0, double tau)
     {
         Assert.That(() => _calculator.ExpectedCumulativeFailures(lambda0, v0, tau), Throws.TypeOf<ArgumentOutOfRangeException>());
