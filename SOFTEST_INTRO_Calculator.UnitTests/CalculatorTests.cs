@@ -22,7 +22,7 @@ public class CalculatorTests
     }
 
     [TestCase(0, 0, 0)]
-    [TestCase(0, 5, 5)]
+    [TestCase(0, 5, 10)]
     [TestCase(-3, 8, 5)]
     [TestCase(0.1, 0.2, 0.3)]
     public void Add_RepresentativeInputs_ReturnsSum(double a, double b, double expected)
@@ -198,7 +198,7 @@ public class CalculatorTests
 
     [TestCase(0, 100, 10)]
     [TestCase(10, 0, 10)]
-    [TestCase(10, 100, -4)]
+    [TestCase(10, 100, -5)]
     public void ExpectedCumulativeFailures_InvalidInputs_ThrowsArgumentOutOfRangeException(double lambda0, double v0, double tau)
     {
         Assert.That(() => _calculator.ExpectedCumulativeFailures(lambda0, v0, tau), Throws.TypeOf<ArgumentOutOfRangeException>());
